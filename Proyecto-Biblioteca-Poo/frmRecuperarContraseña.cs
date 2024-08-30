@@ -54,5 +54,13 @@ namespace Proyecto_Biblioteca_Poo
             }
             else { MessageBox.Show("ERROR, CODIGO INCORRECTO, VERIFIQUE."); }
         }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
