@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmActualizarContraseña));
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.lbCorreo = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNuevaClave = new System.Windows.Forms.TextBox();
             this.lbCodigo = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtConfirmarCLave = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.btnOcultarContraseña = new System.Windows.Forms.Button();
@@ -64,14 +64,14 @@
             this.lbCorreo.TabIndex = 9;
             this.lbCorreo.Text = "Correo";
             // 
-            // textBox1
+            // txtNuevaClave
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(137, 299);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(253, 35);
-            this.textBox1.TabIndex = 13;
+            this.txtNuevaClave.Enabled = false;
+            this.txtNuevaClave.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNuevaClave.Location = new System.Drawing.Point(137, 299);
+            this.txtNuevaClave.Name = "txtNuevaClave";
+            this.txtNuevaClave.Size = new System.Drawing.Size(253, 35);
+            this.txtNuevaClave.TabIndex = 13;
             // 
             // lbCodigo
             // 
@@ -84,14 +84,14 @@
             this.lbCodigo.TabIndex = 12;
             this.lbCodigo.Text = "Nueva Contraseña";
             // 
-            // textBox2
+            // txtConfirmarCLave
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(137, 396);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(253, 35);
-            this.textBox2.TabIndex = 15;
+            this.txtConfirmarCLave.Enabled = false;
+            this.txtConfirmarCLave.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmarCLave.Location = new System.Drawing.Point(137, 396);
+            this.txtConfirmarCLave.Name = "txtConfirmarCLave";
+            this.txtConfirmarCLave.Size = new System.Drawing.Size(253, 35);
+            this.txtConfirmarCLave.TabIndex = 15;
             // 
             // label1
             // 
@@ -120,6 +120,7 @@
             this.btnEnviar.TabIndex = 16;
             this.btnEnviar.Text = "ACTUALIZAR";
             this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // btnOcultarContraseña
             // 
@@ -216,9 +217,9 @@
             this.Controls.Add(this.btnOcultarContraseña);
             this.Controls.Add(this.btnMostrarContraseña);
             this.Controls.Add(this.btnEnviar);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtConfirmarCLave);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNuevaClave);
             this.Controls.Add(this.lbCodigo);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.lbCorreo);
@@ -234,9 +235,9 @@
         #endregion
 
         private System.Windows.Forms.Label lbCorreo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNuevaClave;
         private System.Windows.Forms.Label lbCodigo;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtConfirmarCLave;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.Button btnOcultarContraseña;

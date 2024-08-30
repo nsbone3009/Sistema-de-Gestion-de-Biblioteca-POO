@@ -21,5 +21,19 @@ namespace Proyecto_Biblioteca_Poo
         {
             this.Close();
         }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            csConexionSQL nueva = new csConexionSQL();
+            if (txtNuevaClave.Text == txtConfirmarCLave.Text)
+            {
+                nueva.ActualizarContraseña(txtCorreo.Text, txtNuevaClave.Text);
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("La Claves no son iguales");
+            }
+        }
     }
 }
